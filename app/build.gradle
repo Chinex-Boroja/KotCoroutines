@@ -54,6 +54,7 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
 
+    //coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC2")
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-RC2'
 
