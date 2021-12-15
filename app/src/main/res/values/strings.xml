@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Room2</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_customer_name">Enter customer name</string>
+    <string name="save">Save</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
 </resources>
