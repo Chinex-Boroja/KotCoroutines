@@ -14,11 +14,11 @@ class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(
 
 
     @Bindable
-    val inputName = MutableLiveData<String>()
+    val inputName = MutableLiveData<String?>()
     @Bindable
-    val inputEmail = MutableLiveData<String>()
+    val inputEmail = MutableLiveData<String?>()
     @Bindable
-    val inputPhoneNumber = MutableLiveData<String>()
+    val inputPhoneNumber = MutableLiveData<String?>()
     @Bindable
     val saveOrUpdateButtonText = MutableLiveData<String>()
     @Bindable
@@ -29,10 +29,19 @@ class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(
         clearAllOrDeleteButtonText.value = "Clear All "
     }
     fun saveOrUpdate() {
+        val name : String = inputName.value!!
+        val email : String = inputEmail.value!!
+        val number : String = inputPhoneNumber.value!!
+
+        insert(Customer(0, name, email, number))
+
+        inputName.value = null
+        inputEmail.value = null
+        inputPhoneNumber.value = null
 
     }
     fun clearAllOrDelete() {
-
+        clearAll()
     }
 
     //function to insert a customer
@@ -51,8 +60,8 @@ class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(
 
     }
     //function to delete all customers
-    fun clearAll(customer: Customer): Job = viewModelScope.launch {
-        repository.deleteAll(customer)
+    fun clearAll(): Job = viewModelScope.launch {
+        repository.deleteAll()
 
     }
 }
