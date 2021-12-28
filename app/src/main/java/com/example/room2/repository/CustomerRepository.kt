@@ -20,7 +20,7 @@ class CustomerRepository(private val dao : CustomerDAO) {
         dao.deleteCustomer(customer)
     }
 
-    suspend fun deleteAll(customer: Customer) {
+    suspend fun deleteAll() {
         dao.deleteAll()
     }
 }
