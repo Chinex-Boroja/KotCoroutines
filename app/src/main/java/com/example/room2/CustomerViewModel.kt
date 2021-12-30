@@ -1,6 +1,7 @@
 package com.example.room2
 
 import androidx.databinding.Bindable
+import androidx.databinding.Observable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +10,7 @@ import com.example.room2.repository.CustomerRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class CustomerViewModel(private val repository: CustomerRepository) : ViewModel() {
+class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(), Observable  {
     val customers = repository.customers
 
 
@@ -62,6 +63,14 @@ class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(
     //function to delete all customers
     fun clearAll(): Job = viewModelScope.launch {
         repository.deleteAll()
+
+    }
+
+    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+
+    }
+
+    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
 
     }
 }
