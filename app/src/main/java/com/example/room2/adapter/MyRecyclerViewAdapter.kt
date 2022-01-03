@@ -11,11 +11,11 @@ class MyRecyclerViewAdapter(private val customersList: List<Customer>) : Recycle
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+
     }
 
 }
