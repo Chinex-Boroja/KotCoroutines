@@ -23,7 +23,7 @@
             android:layout_marginBottom="5dp"
             android:hint="@string/enter_customer_name"
             android:inputType="text"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:text="@={myViewModel.inputName}"
             app:layout_constraintStart_toStartOf="parent"
