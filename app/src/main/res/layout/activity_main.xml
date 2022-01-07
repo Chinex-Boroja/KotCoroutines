@@ -51,7 +51,7 @@
             android:layout_marginBottom="5dp"
             android:hint="@string/enter_your_phone_number"
             android:inputType="number"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:text="@={myViewModel.inputPhoneNumber}"
             app:layout_constraintStart_toStartOf="parent"
