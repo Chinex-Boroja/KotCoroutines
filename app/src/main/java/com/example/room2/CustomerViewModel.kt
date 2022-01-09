@@ -27,7 +27,7 @@ class CustomerViewModel(private val repository: CustomerRepository) : ViewModel(
 
     init {
         saveOrUpdateButtonText.value = "Save"
-        clearAllOrDeleteButtonText.value = "Clear All"
+        clearAllOrDeleteButtonText.value = "Clear All Data"
     }
     fun saveOrUpdate() {
         val name : String = inputName.value!!
