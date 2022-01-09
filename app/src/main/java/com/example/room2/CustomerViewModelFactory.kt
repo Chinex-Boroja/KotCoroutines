@@ -10,6 +10,6 @@ class CustomerViewModelFactory(private val repository: CustomerRepository): View
         if(modelClass.isAssignableFrom(CustomerViewModel::class.java)){
             return CustomerViewModel(repository) as T
         }
-        throw IllegalArgumentException("Unknown View Model class.")
+        throw IllegalArgumentException("Unknown View Model class")
     }
 }
