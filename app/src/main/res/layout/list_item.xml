@@ -42,7 +42,7 @@
                     android:layout_margin="10dp"
                     android:text="@string/chinex_gmail_com"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
