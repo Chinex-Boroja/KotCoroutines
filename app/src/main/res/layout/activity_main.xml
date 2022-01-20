@@ -16,7 +16,7 @@
         tools:context=".MainActivity">
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/name_customer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -41,7 +41,7 @@
             android:textStyle="bold"
             android:text="@={myViewModel.inputEmail}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name" />
+            app:layout_constraintTop_toBottomOf="@id/name_customer" />
 
         <EditText
             android:id="@+id/phone"
